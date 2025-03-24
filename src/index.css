@@ -1,0 +1,202 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 195 53% 79%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 195 53% 94%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 195 53% 94%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 230 50% 10%; /* Darker background for night mode */
+    --foreground: 210 40% 98%;
+
+    --card: 230 50% 8%; /* Darker card background */
+    --card-foreground: 210 40% 98%;
+
+    --popover: 230 50% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    transition: background-color 0.5s ease-in-out;
+  }
+}
+
+/* Theme transition effects */
+.theme-transition {
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease,
+    border-color 0.5s ease;
+}
+
+/* Pixel art cursor */
+.pixel-cursor {
+  cursor: none;
+}
+
+/* Night mode specific styles */
+.dark .star {
+  animation: twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Sunlight mode specific styles */
+.light .cloud {
+  animation: float 20s infinite linear;
+}
+
+@keyframes float {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+/* Enhanced visibility for text in dark mode */
+.dark section {
+  background-color: rgba(
+    10,
+    10,
+    42,
+    0.85
+  ); /* Darker night blue with less transparency */
+}
+
+.dark .bg-gray-900\/50 {
+  background-color: rgba(
+    17,
+    24,
+    39,
+    0.9
+  ); /* Darker with better contrast and less transparency */
+}
+
+.dark .bg-gray-800\/50 {
+  background-color: rgba(
+    31,
+    41,
+    55,
+    0.9
+  ); /* Darker with better contrast and less transparency */
+}
+
+.dark .text-gray-400 {
+  color: rgba(229, 231, 235, 1); /* Brighter text for better readability */
+}
+
+.dark .text-gray-300 {
+  color: rgba(243, 244, 246, 1); /* Brighter text for better readability */
+}
+
+/* Persistent visibility for sections */
+section {
+  position: relative;
+  z-index: 10;
+}
+
+/* Improved navbar visibility */
+nav {
+  backdrop-filter: blur(8px);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Ensure text doesn't fade on scroll */
+.text-white,
+.text-gray-300,
+.text-gray-400 {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Improved interaction for buttons */
+button,
+a {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+button:hover,
+a:hover {
+  transform: translateY(-2px);
+}
+
+button:active,
+a:active {
+  transform: translateY(1px);
+}
+
+/* Improved card visibility */
+.bg-gray-900\/70,
+.bg-gray-800\/70 {
+  backdrop-filter: blur(4px);
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.2),
+    0 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
