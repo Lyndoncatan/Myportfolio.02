@@ -23,36 +23,36 @@ const Projects = ({
   projects = [
     {
       id: "1",
-      title: "E-Commerce Platform",
+      title: "Lhood Shop",
       description:
         "A full-stack e-commerce platform with user authentication, product catalog, and payment integration.",
       imageUrl:
-        "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80",
-      liveUrl: "https://example.com/ecommerce",
-      githubUrl: "https://github.com/lyndoncatan/ecommerce",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+        "no image showed",
+      liveUrl: "https://l-hood-shop.vercel.app/",
+      githubUrl: "https://github.com/Lyndoncatan/L-hood-Shop",
+      technologies: ["Typescript", "Css", "Java script"],
     },
     {
       id: "2",
-      title: "Weather Dashboard",
+      title: "Streamy",
       description:
-        "Real-time weather application with location-based forecasts and interactive maps.",
+        "User can create and post and watch videos.",
       imageUrl:
-        "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&q=80",
-      liveUrl: "https://example.com/weather",
-      githubUrl: "https://github.com/lyndoncatan/weather-app",
-      technologies: ["React", "OpenWeather API", "Leaflet", "Tailwind CSS"],
+        "no image showed",
+      liveUrl: "https://streamy-my-youtube-version.vercel.app/",
+      githubUrl: "https://github.com/Lyndoncatan/Streamy-myYoutube-version",
+      technologies: ["Typescript", "Javascript", "Html", "CSS"],
     },
     {
       id: "3",
-      title: "Task Management App",
+      title: "Sonify",
       description:
-        "Collaborative task management tool with real-time updates and team collaboration features.",
+        "User can listen to musci and create playlist.",
       imageUrl:
-        "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
-      liveUrl: "https://example.com/taskmanager",
-      githubUrl: "https://github.com/lyndoncatan/task-manager",
-      technologies: ["React", "Firebase", "Material UI", "Redux"],
+        "no image showed",
+      liveUrl: "https://sonify-my-spotify-version.vercel.app/",
+      githubUrl: "https://github.com/Lyndoncatan/sonify-my-Spotify-version",
+      technologies: ["Typescript", "Javascript", "Css"],
     },
   ],
   title = "Projects",
